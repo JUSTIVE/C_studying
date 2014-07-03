@@ -1,24 +1,22 @@
-
-#include <stdio.h>
-int set_human(struct TEST a, int age, int gender);
-struct TEST 
+//reversed gugudan
+#include<stdio.h>
+void main()
 {
-    int age;
-    int gender;
-};
-int main()
-{
-    struct TEST human;
-
-    set_human(human, 10, 1);
-
-    printf("AGE : %d // Gender : %d ", human.age, human.gender);
-    return 0;
-}
-int set_human(struct TEST a, int age, int gender)
-{
-    a.age = age;
-    a.gender = gender;
-
-    return 0;
+	int i,j,l,a=4,b=10;
+	for (i=0;i<4;i++){
+		for(l=9;l>0;l--)
+		{
+				
+			for(j=0;j<a;j++)
+			{
+				printf("%d * %d = %d\t",b,l,b*l);
+				b--;
+			}
+			printf("\n");
+			b+=a;
+		}
+		printf("\n");
+		a--;
+		b-=(a+1);	
+	}
 }
